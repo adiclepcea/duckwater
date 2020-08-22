@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ratzozaurul - v1</title>
+    <link rel="stylesheet" href="bulma.min.css">
+    <script src="axios.min.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Ratzozaurul - v1
+      </h1>
+      <p class="subtitle">
+      Overengineered <strong>duck</strong> water changing application
+      </p>
+      <a class="button is-success" onclick="forward()">Forward</a>
+      <a class="button is-success" onclick="backward()">Backward</a>
+      <a class="button is-danger" onclick="stop()">Stop</a>
+    </div>
+  </section>
+	<script>
+		function forward(){
+			axios.get("/forward");
+		}
+		function backward(){
+			axios.get("/backward");
+		}
+		function stop(){
+			axios.get("/stop");
+		}
+	</script>
+  </body>
+</html>
